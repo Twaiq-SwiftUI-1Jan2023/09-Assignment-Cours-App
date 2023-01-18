@@ -36,7 +36,7 @@ struct SecondView: View {
             .padding()
             Spacer()
             Text("Find Your Favorit Vication trip")
-                .font(.largeTitle)
+                .font(.title)
                 .padding()
             HStack {
                 TextField("Search", text:$input)
