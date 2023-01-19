@@ -9,6 +9,7 @@ import SwiftUI
 
 struct CoursesView: View {
     
+    @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
     @State private var searchText: String = ""
     let categories = Category.categories
     let courses = Course.courses
@@ -21,7 +22,7 @@ struct CoursesView: View {
                 // MARK: - Profile Image Buttons
                 HStack{
                     Button {
-                        
+                        presentationMode.wrappedValue.dismiss()
                     } label: {
                         Image(systemName: "chevron.left")
                             .font(.largeTitle)
@@ -117,7 +118,9 @@ struct CoursesView: View {
                 ScrollView(.horizontal, showsIndicators: false) {
                     HStack(spacing: 20) {
                         ForEach(courses) { course in
-                            CourseCard(course: course)
+                            NavigationLink(destination: DetailsView(course: course).navigationBarBackButtonHidden(true) .navigationBarHidden(true)) {
+                                CourseCard(course: course)
+                            }
                         }
                     }
                 }

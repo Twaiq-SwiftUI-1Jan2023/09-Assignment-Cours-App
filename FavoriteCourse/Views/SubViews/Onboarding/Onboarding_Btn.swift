@@ -13,7 +13,9 @@ struct Onboarding_Btn: View {
     
     var body: some View {
         Button {
-            
+            if title != "Skip" && selection != 4 {
+                selection += 1
+            }
         } label: {
             ZStack {
                 RoundedRectangle(cornerRadius: 20)
@@ -30,14 +32,6 @@ struct Onboarding_Btn: View {
                     .foregroundColor(title == "Skip" ? Colors.black : Colors.white)
                     .font(.title3)
                     .bold()
-            }
-            .onTapGesture {
-                if title == "Next" && selection != 4 {
-                    selection += 1
-                } else {
-                    // Navigate!
-                    
-                }
             }
         }
     }

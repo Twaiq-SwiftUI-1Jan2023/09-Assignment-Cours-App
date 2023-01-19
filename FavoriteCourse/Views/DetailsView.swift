@@ -9,7 +9,8 @@ import SwiftUI
 
 struct DetailsView: View {
     
-    @Binding var course: Course
+    @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
+    var course: Course
     
     var body: some View {
         ZStack {
@@ -21,7 +22,7 @@ struct DetailsView: View {
                     HStack {
                         // Back Btn
                         Button {
-                            
+                            presentationMode.wrappedValue.dismiss()
                         } label: {
                             Image(systemName: "chevron.left")
                                 .font(.largeTitle)
@@ -199,6 +200,6 @@ struct DetailsView: View {
 
 struct DetailsView_Previews: PreviewProvider {
     static var previews: some View {
-        DetailsView(course: .constant(Course.courses.first!))
+        DetailsView(course: Course.courses.first!)
     }
 }

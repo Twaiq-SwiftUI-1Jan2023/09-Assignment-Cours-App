@@ -18,6 +18,7 @@ struct Colors {
     static let purple = Color(hex:"#6A74C5")
     
     static let green = Color(hex:"#74B39E")
+    static let blue = Color(hex:"#144272")
     static let blueGreen = Color(hex:"#5E8492")
     static let mint = Color(hex:"#E7F6F1")
     static let sprout = Color(hex:"#EFF8E5")
@@ -29,4 +30,6 @@ struct Images {
     static let uiUx = Image("ui_ux")
     static let grDesign = Image("grDesign")
     static let man = Image("man")
+    static let man2 = Image("man2")
+    static let man3 = Image("man3")
 }

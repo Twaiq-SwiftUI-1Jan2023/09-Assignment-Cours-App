@@ -8,9 +8,10 @@
 import SwiftUI
 
 struct ContentView: View {
-    var body: some View {
-//        OnboardingView()
+    
+    var body: some View {   
+        OnboardingView()
 //        CoursesView()
-        DetailsView(course: .constant(Course.courses.first!))
+//        DetailsView(course: .constant(Course.courses.first!))
     }
 }
