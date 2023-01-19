@@ -1,0 +1,54 @@
+import SwiftUI
+
+struct ContentView: View {
+    var body: some View {
+        VStack{
+            Spacer()
+            VStack{
+                Image("imge11")
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+            }
+            Spacer()
+            
+            HStack{
+                Text("اهلا بك")
+                    .font(.largeTitle)
+            }
+            .padding()
+            HStack{
+                Text("hyhgfbtdfhrthbsrthgtrwjsngnbtrghbrtghtnstnsfngnsfgnfgnfgnnnrtnrtntntrtrttthghghsgdahdhtt")
+                    .foregroundColor(Color(hue: 1.0, saturation: 0.049, brightness: 0.585))
+                    .multilineTextAlignment(.center)
+            }
+            Spacer()
+                
+            HStack{
+                Button("pefor") {
+                    /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Action@*/ /*@END_MENU_TOKEN@*/
+                }
+                Spacer()
+                    .padding(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
+               
+                Button("next") {
+                    /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Action@*/ /*@END_MENU_TOKEN@*/
+                }
+                
+            }
+            .padding()
+            
+            
+        }
+        .frame()
+        .accessibilityLabel("1111111111")
+    
+    
+        
+    }
+    
+    struct ContentView_Previews: PreviewProvider {
+        static var previews: some View {
+            ContentView()
+        }
+    }
+}
